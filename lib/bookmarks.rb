@@ -1,12 +1,9 @@
+require 'pg'
+
 class Bookmarks
-
-  attr_reader :bookmarks
-
-  def initialize
-    @bookmarks = ["http://github.com", "www.google.com" ]
-  end
-
-  def list_bookmarks
-    @bookmarks.join(", ")
+  def self.all
+    conn = PG.connect(dbname: 'bookmark_manager')
+    result = conn.exec("SELECT * FROM bookmarks;")
+    result.map {|bookmark| bookmark['url']}       
   end
 end
