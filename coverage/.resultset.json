@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/szilvi/Projects/bookmark_manager/spec/bookmark_spec.rb": [
+      "/Users/szilvi/Projects/bookmark_manager/spec/bookmarks_spec.rb": [
         1,
         null,
         1,
@@ -22,10 +22,11 @@
         1,
         1,
         1,
+        1,
         null,
         null
       ]
     },
-    "timestamp": 1548688261
+    "timestamp": 1548688961
   }
 }
