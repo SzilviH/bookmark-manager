@@ -12,3 +12,13 @@ feature 'View bookmarks' do
     expect(page).to have_content "www.google.com"
   end
 end
+
+feature '#.add' do
+  scenario 'add new bookmarks' do
+    visit '/'
+    fill_in 'bookmark_name', with: 'http://www.codewars.com'
+    click_button 'Add Bookmark'
+    expect(page).to_not have_content "BACKTRACE"
+    expect(page).to have_content "http://www.codewars.com"
+  end
+end

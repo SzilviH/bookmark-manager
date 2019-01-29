@@ -11,4 +11,9 @@ class App < Sinatra::Base
     @bookmarks = Bookmarks.all
     erb :bookmarks
   end
+
+  post '/add_book' do
+    @bookmark_name = Bookmarks.add(params[:bookmark_name])
+    redirect '/bookmarks'
+  end
 end

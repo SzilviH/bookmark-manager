@@ -11,6 +11,7 @@ As a time-pressed user
 So that I can save a website
 I would like to add the site's address and title to bookmark manager
 ```
+![domain model](./images/IMG_2454.jpeg)
 
 Instructions
 ----
