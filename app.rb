@@ -13,7 +13,7 @@ class App < Sinatra::Base
   end
 
   post '/add_book' do
-    @bookmark_name = Bookmarks.add(params[:bookmark_name])
+    @bookmark_name = Bookmarks.add(params[:bookmark_name], params[:title])
     redirect '/bookmarks'
   end
 end

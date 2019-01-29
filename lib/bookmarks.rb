@@ -5,12 +5,12 @@ class Bookmarks
   def self.all
     setup
     result = @conn.exec("SELECT * FROM bookmarks;")
-    result.map {|bookmark| bookmark['url']}
+    result.map {|bookmark| [bookmark['url'],bookmark['title']]}
   end
 
-  def self.add(bookmark)
+  def self.add(bookmark, title)
     setup
-    @conn.exec("INSERT INTO bookmarks (url) VALUES ('#{bookmark}');")
+    @conn.exec("INSERT INTO bookmarks (url,title) VALUES ('#{bookmark}','#{title}');")
   end
 
   private

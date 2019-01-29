@@ -9,8 +9,8 @@ def setup_test_database
   connection.exec ("TRUNCATE bookmarks;")
 
   # Adds three websites to the test database
-  connection.exec ( "INSERT INTO bookmarks VALUES (1, 'http://www.makersacademy.com');" )
-  connection.exec ( "INSERT INTO bookmarks VALUES (2, 'http://destroyallsoftware.com');" )
-  connection.exec ( "INSERT INTO bookmarks VALUES (3, 'http://www.google.com');" )
+  connection.exec ( "INSERT INTO bookmarks VALUES (1, 'http://www.makersacademy.com', 'makers');" )
+  connection.exec ( "INSERT INTO bookmarks VALUES (2, 'http://destroyallsoftware.com', 'destroy');" )
+  connection.exec ( "INSERT INTO bookmarks VALUES (3, 'http://www.google.com', 'google');" )
 
 end
