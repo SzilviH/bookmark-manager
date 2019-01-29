@@ -10,7 +10,7 @@ class Bookmarks
 
   def self.add(bookmark)
     setup
-    add = @conn.exec("INSERT INTO bookmarks (url) VALUES ('#{bookmark}');")
+    @conn.exec("INSERT INTO bookmarks (url) VALUES ('#{bookmark}');")
   end
 
   private
