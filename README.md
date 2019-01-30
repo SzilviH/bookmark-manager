@@ -13,7 +13,7 @@ I would like to add the site's address and title to bookmark manager
 ```
 ![domain model](./images/IMG_2454.jpeg)
 
-Instructions
+Instructions to set up database and test database
 ----
 1. Connect to psql
 2. Create and connect to database:
@@ -22,3 +22,8 @@ admin=# CREATE DATABASE bookmark_manager;
 admin=# \c bookmark_manager
 ```
 3. Run query in file 01_create_bookmarks_table.sql
+4. Create test database:
+```
+admin=# CREATE DATABASE bookmark_manager_test;
+```
+Run query in file 01_create_bookmarks_table.sql again.
